@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
 typedef struct Car {
     char brand[20];
     char model[20];
 } Car;
-
+*/
 int main(void){
  /*
 {
@@ -24,7 +25,7 @@ int main(void){
     };
 }*/
 
-
+/*
     Car car1;
     strcpy(car1.brand, "BYD");
     strcpy(car1.model, "Shark");
@@ -43,5 +44,34 @@ int main(void){
     car_atr_pointer3 = &car1.brand[0];
     car_atr_pointer4 = &car1.model[0];
     printf("Car brand is: %s, and model is: %s\n", car_atr_pointer3, car_atr_pointer4);
+
+*/
+char buffer[100];
+printf("Enter a string: ");
+buffer = getline();
+
+/*
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char *buffer = NULL;
+    size_t bufsize = 0;
+    ssize_t characters;
+
+    printf("请输入一行文字: ");
+    characters = getline(&buffer, &bufsize, stdin);
+
+    if (characters != -1) {
+        printf("你输入了: %s", buffer);
+        printf("读取的字符数: %zd\n", characters);
+        printf("缓冲区大小: %zu\n", bufsize);
+    }
+
+    free(buffer); // 必须手动释放内存
+    return 0;
+}
+*/
 
 }
